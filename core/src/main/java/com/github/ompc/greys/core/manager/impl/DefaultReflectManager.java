@@ -44,8 +44,7 @@ public class DefaultReflectManager implements ReflectManager {
     public Collection<Class<?>> searchSubClass(final Class<?> targetClass) {
         final Set<Class<?>> classSet = new LinkedHashSet<Class<?>>();
         for (Class<?> clazz : classDataSource.allLoadedClasses()) {
-            if (!clazz.equals(targetClass)
-                    && targetClass.isAssignableFrom(clazz)) {
+            if (!clazz.equals(targetClass) && targetClass.isAssignableFrom(clazz)) {
                 classSet.add(clazz);
             }
         }

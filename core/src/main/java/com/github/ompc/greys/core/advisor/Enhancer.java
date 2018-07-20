@@ -347,6 +347,7 @@ public class Enhancer implements ClassFileTransformer {
         return StringUtils.startsWith(clazz.getCanonicalName(), "com.github.ompc.greys.");
     }
 
+    // TODO
     private static Map<Class<?>, Matcher<AsmMethod>> toEnhanceMap(final PointCut pointCut) {
 
         final Map<Class<?>, Matcher<AsmMethod>> enhanceMap = new LinkedHashMap<Class<?>, Matcher<AsmMethod>>();
@@ -395,6 +396,7 @@ public class Enhancer implements ClassFileTransformer {
      * @return 增强影响范围
      * @throws UnmodifiableClassException 增强失败
      */
+    // TODO
     public static synchronized EnhancerAffect enhance(
             final Instrumentation inst,
             final int adviceId,
